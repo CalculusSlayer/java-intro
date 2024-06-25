@@ -24,7 +24,47 @@ public class june_20_24 {
         for (int count=0; count < 7; count++) {
             System.out.println(count + "! = " + june_20_24.factorial(count));
         }
+        System.out.println("\n\n");
+
+        // Exercise 3
+        for (int count=-1; count <= 7; count++) {
+            System.out.println("Is " + count + " prime? : " + june_20_24.primeChecker(count));
+        }
     }
+
+    /*
+     * Exercise 3: Prime Number Checker
+        Develop a Java method that checks if a number
+        is a prime number.
+        A prime number is a number greater than 1 that 
+        has no positive divisors other than 1 and itself.
+     */
+
+     /*
+      * Ex 1: primeChecker(5)
+      check 5 % 2 == 0, false
+      check 5 % 3 == 0, false
+      check 5 % 4 == 0, false
+      
+      return true
+
+      Ex 2: primeChecker(4)
+      check 4 % 2 == 0, true
+
+      return false
+      */
+     public static boolean primeChecker(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int count=2; count < n; count++) {
+            if (n % 2 == 0) {
+                return false;
+            }
+        }
+        return true;
+
+     }
     /*
      * Exercise 2: Factorial Calculator
 Write a method in Java that calculates the factorial
@@ -39,6 +79,7 @@ Write a method in Java that calculates the factorial
         
         return n * factorial(n-1);
     }
+
 }
 
 /*
