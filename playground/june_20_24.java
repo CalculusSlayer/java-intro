@@ -30,8 +30,57 @@ public class june_20_24 {
         for (int count=-1; count <= 7; count++) {
             System.out.println("Is " + count + " prime? : " + june_20_24.primeChecker(count));
         }
-    }
+        System.out.println("\n\n");
+        
+        // Exercise 4
+        String[] listOfWords = {"abc",
+                                "abbac",
+                                "cookie",
+                                "1234",
+                                "",
+                                "the quick brown fox",
+                                "AaAAAa"};
+        
+        for (int index=0; index<7; index++) {
+            System.out.println(listOfWords[index] +  " -> " + june_20_24.stringReverser(listOfWords[index]));
+        }
 
+    }
+    /*
+     * Exercise 4: String Reverser
+    Create a method that takes a string 
+    as input and returns the string in reverse 
+    order. This will help you work with strings and arrays.
+     */
+    public static String stringReverser(String s) {
+        /*
+         * 1) Find the length of String `s` initialize a character array of same size.
+         * 2) Loop through the characters in String s backwards while assigning
+         * each element in the new character array (we are assuming that Strings
+         * in java can be accessed by the index).
+         * 3) Create and return new string object from the character array.
+         */
+
+         // step 1
+         char[] newStringArray = new char[s.length()];
+
+         // step 2
+         /*
+          * count=4, index=0
+            count=3, index=1
+            count=2, index=2
+            count=1, index=3
+            count=0, index=4
+
+            s.length() - 1 - count = index
+          */
+         for (int count=s.length()-1; count >= 0; count--) {
+            newStringArray[s.length() - 1 - count] = s.charAt(count);
+         }
+        
+         // step 3
+         return new String(newStringArray);
+    }
     /*
      * Exercise 3: Prime Number Checker
         Develop a Java method that checks if a number
