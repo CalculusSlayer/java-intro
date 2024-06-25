@@ -4,6 +4,7 @@ public class june_25_24 {
 
         SortingAlgorithms s = new SortingAlgorithms();
 
+        // bubble sort test
         int[] A1 = {1, 2, 3, 4, 5};
         System.out.print("Before sorting A1: ");
         s.printArray(A1, 5);
@@ -29,6 +30,25 @@ public class june_25_24 {
         s.bubbleSort(A3, 5);
         System.out.print("After sorting A3: ");
         s.printArray(A3, 5);
+        System.out.println("\n");
+
+        // selection sort tests
+        int[] A4 = {3, 2, 1, 5, 4};
+        System.out.print("Before sorting A4: ");
+        s.printArray(A4, 5);
+        System.out.println();
+        s.selectionSort(A4, 5);
+        System.out.print("After sorting A4: ");
+        s.printArray(A4, 5);
+        System.out.println("\n");
+
+        int[] A5 = {5, 4, 3, 2, 1};
+        System.out.print("Before sorting A5: ");
+        s.printArray(A5, 5);
+        System.out.println();
+        s.selectionSort(A5, 5);
+        System.out.print("After sorting A5: ");
+        s.printArray(A5, 5);
         System.out.println("\n");
     }
 }
@@ -87,6 +107,21 @@ public class june_25_24 {
                     swapped = true;
                 }
             }
+        }
+    }
+
+    public void selectionSort(int[] A, int n) {
+        for (int i = 0; i < n-1; i++) {
+            int min_index = i;
+            for (int j = i + 1; j < n; j++) {
+                if (A[j] < A[min_index]) {
+                    min_index = j;
+                }
+            }
+            // swap(A[i], A[min_index])
+            int temp = A[min_index];
+            A[min_index] = A[i];
+            A[i] = temp;
         }
     }
  }
