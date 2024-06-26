@@ -6,6 +6,23 @@ public class BicycleDemo {
         Bicycle bike1 = new Bicycle();
         Bicycle bike2 = new Bicycle();
 
+        bike2.speedUp(20);
+
+        bike1.printStates();
+        bike2.printStates();
+
+        bike1.changeLevel(50);
+        bike1.printStates();
+        bike2.printStates();
+
+        Bicycle bike3 = new Bicycle();
+        bike3.printStates();
+
+        for (int i = 0; i < 30; i++) {
+          System.out.print("*");
+        }
+        System.out.println();
+
         // Invoke methods on 
         // those objects
         bike1.changeCadence(50);
@@ -20,12 +37,15 @@ public class BicycleDemo {
         bike2.speedUp(10);
         bike2.changeGear(3);
         bike2.printStates();
+
+        bike3.printStates();
     }
 }
 
 class Bicycle {
 
-     int cadence = 0;
+     static int level = 10; // class variable
+     int cadence = 0; // instance variables down below
      int speed = 0;
      int gear = 1;
  
@@ -44,10 +64,15 @@ class Bicycle {
      void applyBrakes(int decrement) {
           speed = speed - decrement;
      }
+
+     void changeLevel(int newValue) {
+          level = newValue;
+     }
  
      void printStates() {
           System.out.println("cadence:" +
               cadence + " speed:" + 
-              speed + " gear:" + gear);
+              speed + " gear:" + gear
+              + " level:" + level);
      }
 }
