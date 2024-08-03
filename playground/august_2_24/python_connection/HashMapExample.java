@@ -40,6 +40,13 @@ public class HashMapExample {
 
         myDict.put("key3", "value5");
         System.out.println(String.format("myDict.entrySet() = %s", myDict.entrySet()));
+        System.out.println();
+
+        // Iterate through hash map
+        for (Map.Entry<String, String> entry : myDict.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+        
 
     }
 }
