@@ -31,7 +31,9 @@ public class kadane {
         return Arrays.asList(start, end);
     }
     public static void main(String[] args) {
-        System.out.println("8-5-24");
-        maxSum(Arrays.asList(-2, 1, -3, 4, -1, 2, 1, -5, 4));
+        List<Integer> a1 = Arrays.asList(-2, 1, -3, 4, -1, 2, 1, -5, 4);
+        System.out.println(String.format(
+            "max sum interval of %s: %s", a1, kadane.maxSum(a1))
+        );
     }
 }
