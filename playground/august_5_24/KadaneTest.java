@@ -20,10 +20,10 @@ public class KadaneTest {
         List<Integer> result3 = kadane.maxSum(testCase3);
         assert result3.equals(Arrays.asList(0, 0)) : "Test Case 3 Failed - Expected [0, 0] but got " + result3;
 
-        // Test Case 4: Maximum sum subarray is [3, -2, 5] with indices [0, 2]
+        // Test Case 4: Maximum sum subarray is [3, -2, 5, -1, 2] with indices [0, 4]
         List<Integer> testCase4 = Arrays.asList(3, -2, 5, -1, 2);
         List<Integer> result4 = kadane.maxSum(testCase4);
-        assert result4.equals(Arrays.asList(0, 2)) : "Test Case 4 Failed - Expected [0, 2] but got " + result4;
+        assert result4.equals(Arrays.asList(0, 4)) : "Test Case 4 Failed - Expected [0, 4] but got " + result4;
 
         // Test Case 5: Maximum sum subarray is [2, 3, -4, 5] with indices [1, 4]
         List<Integer> testCase5 = Arrays.asList(-1, 2, 3, -4, 5, -2, 1);
@@ -34,6 +34,10 @@ public class KadaneTest {
         List<Integer> testCase6 = Arrays.asList(5, 4, -1, 7, 8);
         List<Integer> result6 = kadane.maxSum(testCase6);
         assert result6.equals(Arrays.asList(0, 4)) : "Test Case 6 Failed - Expected [0, 4] but got " + result6;
+
+        List<Integer> emptyTestCase = Arrays.asList();
+        List<Integer> emptyResult = kadane.maxSum(emptyTestCase);
+        assert emptyResult.equals(Arrays.asList()) : "Empty Test Case Failed - Expected [ ] but got " + emptyResult;
 
         System.out.println("All test cases passed!");
     }
