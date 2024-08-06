@@ -7,7 +7,7 @@ import java.util.List;
 public class kadane {
     public static List<Integer> maxSum(List<Integer> nums) {
         if (nums.isEmpty()) {
-            return new ArrayList<>(Arrays.asList(1));
+            return new ArrayList<>();
         }
         int maxCurrent = nums.get(0);
         int maxGlobal = nums.get(0);
