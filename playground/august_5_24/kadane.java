@@ -13,7 +13,7 @@ public class kadane {
         int maxGlobal = nums.get(0);
         int start = 0, end = 0, tempStart = 0;
 
-        for (int index = 1; index < nums.size()-1; index++) {
+        for (int index = 1; index < nums.size(); index++) {
             if (maxCurrent < 0) {
                 maxCurrent = nums.get(index);
                 tempStart = index;
