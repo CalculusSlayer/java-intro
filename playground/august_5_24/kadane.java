@@ -14,15 +14,21 @@ public class kadane {
         int start = 0, end = 0, tempStart = 0;
 
         for (int index = 1; index < nums.size()-1; index++) {
-            if (nums.get(index) > nums.get(index) + maxCurrent) {
+            if (maxCurrent < 0) {
                 maxCurrent = nums.get(index);
                 tempStart = index;
             } else {
                 maxCurrent += nums.get(index);
             }
-            
+
+            if (maxCurrent > maxGlobal) {
+                maxGlobal = maxCurrent;
+                start = tempStart;
+                end = index;
+            }
+
         }
-        return Arrays.asList(0);
+        return Arrays.asList(start, end);
     }
     public static void main(String[] args) {
         System.out.println("8-5-24");
