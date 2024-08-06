@@ -14,7 +14,13 @@ public class kadane {
         int start = 0, end = 0, tempStart = 0;
 
         for (int index = 1; index < nums.size()-1; index++) {
-            if 
+            if (nums.get(index) > nums.get(index) + maxCurrent) {
+                maxCurrent = nums.get(index);
+                tempStart = index;
+            } else {
+                maxCurrent += nums.get(index);
+            }
+            
         }
         return Arrays.asList(0);
     }
