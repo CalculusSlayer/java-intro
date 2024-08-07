@@ -8,7 +8,8 @@ import java.util.*;
  * only undirected edges.
  */
 public class Graph {
-    private HashMap<Integer, HashSet<Integer>> adjacencyList;
+    private HashMap<Integer, HashSet<Integer>> adjacencyList
+    = new HashMap<>();
 
     public Graph(int vertices) {
         for (int vertex = 0; vertex < vertices; vertex++) {
@@ -16,5 +17,7 @@ public class Graph {
         }
     }
 
-    public 
+    public void addEdge(int origin, int destination) {
+        adjacencyList.get(origin).add(destination);
+    }
 }
