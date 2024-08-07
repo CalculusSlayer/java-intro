@@ -20,4 +20,17 @@ public class Graph {
     public void addEdge(int origin, int destination) {
         adjacencyList.get(origin).add(destination);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<Integer, HashSet<Integer>> entry : adjacencyList.entrySet()) {
+            sb.append(entry.getKey()).append(" :");
+            for (Integer vertex : entry.getValue()) {
+                sb.append(" ").append(vertex);
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
 }
