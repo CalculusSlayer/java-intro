@@ -9,12 +9,28 @@ import java.util.*;
  * 
  * Constructors:
  * 
- * public Graph(int vertices) - constructs
- * a graph with a passed in number of vertices
+ * public Graph(int vertices) - Constructs
+ * a graph with a passed in number of vertices.
  * 
  * Attributes:
  * 
- * private HashMap<Integer, HashSet<Integer>> adjacencyList
+ * private HashMap<Integer, HashSet<Integer>> adjacencyList - Main object
+ * used to implement the Graph ADT.
+ * 
+ * Methods:
+ * 
+ * public void addEdge(int origin, int destination) - Add edge.
+ * 
+ * public void removeEdge(int origin, int destination) - Remove edge.
+ * 
+ * public boolean checkEdge(int origin, int destination) - Check if
+ * a certain edge exists.
+ * 
+ * public HashSet<Integer> getNeighbors(int vertex) - Get all
+ * the neighbors of a vertex.
+ * 
+ * 
+ * 
  */
 
 public class Graph {
