@@ -6,7 +6,17 @@ import java.util.*;
  * Class that implements
  * a Graph ADT that contains
  * only undirected edges.
+ * 
+ * Constructors:
+ * 
+ * public Graph(int vertices) - constructs
+ * a graph with a passed in number of vertices
+ * 
+ * Attributes:
+ * 
+ * private HashMap<Integer, HashSet<Integer>> adjacencyList
  */
+
 public class Graph {
     private HashMap<Integer, HashSet<Integer>> adjacencyList
     = new HashMap<>();
