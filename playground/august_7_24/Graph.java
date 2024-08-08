@@ -17,17 +17,25 @@ import java.util.*;
  * private HashMap<Integer, HashSet<Integer>> adjacencyList - Main object
  * used to implement the Graph ADT.
  * 
+ * private vertexCount - Number of vertices.
+ * 
+ * private edgeCount - Number of edges.
+ * 
  * Methods:
  * 
  * (y, n)
  * public void addEdge(int origin, int destination) - Add edge.
  * 
- * (n, n)
+ * (y, n)
  * public void removeEdge(int origin, int destination) - Remove edge.
  * 
- * (n, n)
+ * (y, n)
  * public boolean hasEdge(int origin, int destination) - Check if
  * a certain edge exists.
+ * 
+ * public int getVertexCount() - Returns number of vertices in graph.
+ * 
+ * public int getEdgeCount() - Returns number of edges in graph.
  * 
  * public Set<Integer> getNeighbors(int vertex) - Get all
  * the neighbors of a vertex.
