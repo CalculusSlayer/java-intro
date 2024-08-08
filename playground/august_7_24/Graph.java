@@ -64,6 +64,14 @@ public class Graph {
         vertexCount = vertices;
     }
 
+    public int getVertexCount() {
+        return vertexCount;
+    }
+
+    public int getEdgeCount() {
+        return edgeCount;
+    }
+
     public void addEdge(int origin, int destination) {
         if (!hasEdge(origin, destination)) {
             adjacencyList.get(origin).add(destination);
