@@ -19,11 +19,14 @@ import java.util.*;
  * 
  * Methods:
  * 
+ * (y, n)
  * public void addEdge(int origin, int destination) - Add edge.
  * 
+ * (n, n)
  * public void removeEdge(int origin, int destination) - Remove edge.
  * 
- * public boolean checkEdge(int origin, int destination) - Check if
+ * (n, n)
+ * public boolean hasEdge(int origin, int destination) - Check if
  * a certain edge exists.
  * 
  * public Set<Integer> getNeighbors(int vertex) - Get all
@@ -50,10 +53,25 @@ public class Graph {
         for (int vertex = 0; vertex < vertices; vertex++) {
             adjacencyList.put(vertex, new HashSet<>());
         }
+        vertexCount = vertices;
     }
 
     public void addEdge(int origin, int destination) {
-        adjacencyList.get(origin).add(destination);
+        if (!hasEdge(origin, destination)) {
+            adjacencyList.get(origin).add(destination);
+            edgeCount++;
+        }
+    }
+
+    public void removeEdge(int origin, int destination) {
+        if (hasEdge(origin, destination)) {
+            adjacencyList.get(origin).remove(destination);
+            edgeCount--;
+        }
+    }
+
+    public boolean hasEdge(int origin, int destination) {
+        return adjacencyList.get(origin).contains(destination);
     }
 
     @Override
