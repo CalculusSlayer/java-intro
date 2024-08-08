@@ -35,7 +35,8 @@ import java.util.*;
  * public String toString() - Provide string representation
  * of the graph.
  * 
- * public void depthFirstSearch(int start, Set)
+ * public void depthFirstSearch(int start, Set<Integer> visited) - Print
+ * out all the vertices traversed to from an origin `start`.
  * 
  */
 
@@ -56,7 +57,7 @@ public class Graph {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry<Integer, HashSet<Integer>> entry : adjacencyList.entrySet()) {
+        for (Map.Entry<Integer, Set<Integer>> entry : adjacencyList.entrySet()) {
             sb.append(entry.getKey()).append(" :");
             for (Integer vertex : entry.getValue()) {
                 sb.append(" ").append(vertex);
