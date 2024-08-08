@@ -43,6 +43,8 @@ import java.util.*;
 public class Graph {
     private Map<Integer, Set<Integer>> adjacencyList
     = new HashMap<>();
+    private int vertexCount = 0;
+    private int edgeCount = 0;
 
     public Graph(int vertices) {
         for (int vertex = 0; vertex < vertices; vertex++) {
