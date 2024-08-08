@@ -26,15 +26,21 @@ import java.util.*;
  * public boolean checkEdge(int origin, int destination) - Check if
  * a certain edge exists.
  * 
- * public HashSet<Integer> getNeighbors(int vertex) - Get all
+ * public Set<Integer> getNeighbors(int vertex) - Get all
  * the neighbors of a vertex.
  * 
+ * public Set<Integer> getVertices() - Get all the vertices
+ * of the graph.
  * 
+ * public String toString() - Provide string representation
+ * of the graph.
+ * 
+ * public void depthFirstSearch(int start, Set)
  * 
  */
 
 public class Graph {
-    private HashMap<Integer, HashSet<Integer>> adjacencyList
+    private Map<Integer, Set<Integer>> adjacencyList
     = new HashMap<>();
 
     public Graph(int vertices) {
